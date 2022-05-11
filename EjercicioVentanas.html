@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    #abrir{
+        color: black;
+        border-radius: 5%;
+        border: solid;
+        border-color: black;
+        border-width: 2px;
+        background-color: lightgray;
+        text-decoration:none;
+        padding: 0.5%;
+        position: relative;
+        margin-left: 46vw;
+        margin-right: 46vw ;
+    }
+    #abrir:hover,
+    #abrir:focus{
+        cursor:pointer;
+    }
+    .modal-contenido{
+        background-color:rgb(255, 255, 255);
+        position: relative;
+        width: 60vw;
+        height: 50vh;
+        padding: 10px 20px;
+        margin: 10% auto;
+    }
+    .modal{
+        background-color: rgba(0,0,0,.8);
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+        opacity:0;
+        pointer-events:none;
+        transition: all 1s;
+    }
+    #miModal:target{
+        opacity:1;
+        pointer-events:auto;
+    }
+    #X{
+        color: black;
+        text-decoration:none;
+        font-weight: bold;
+        position: relative;
+        left: 98%;
+        background-color: red;
+        border: solid;
+        border-color: black;
+        border-radius: 2px;
+        padding: 0.3% 0.5%;
+    }
+    body {
+        background-color: gray;
+    }
+    .texto::first-letter {
+        font-size: xx-large;
+        font-weight: bold;
+        font-style: italic;
+    }
+    .texto:nth-child(odd) {
+        background-color: lightgrey;
+    }
+    .texto:nth-child(even) {
+        background-color: white;
+    }
+    p:last-of-type::after {
+        content: "...";
+    }
+    p:only-child::after { 
+        content:none;
+    }
+    p {
+        line-height: 12px;
+    }
+    .texto {
+        line-height: 36px;
+    }
+    </style>
+
+</head>
+<body>
+    <p>Soldadito marinero</p>
+    <div class="texto">
+        <p>Él camina despacito que las prisas no son buenas</p>
+        <p>En su brazo dobladita, con cuidado la chaqueta</p>
+        <p>Luego pasa por la calle dónde los chavales juegan</p>
+        <p>Él también quiso ser niño pero le pilló la guerra</p>
+    </div>
+    <div class="texto">
+        <p>Soldadito marinero conociste a una sirena</p>
+        <p>De esas que dicen te quiero si ven la cartera llena</p>
+        <p>Escogiste a la más guapa y a la menos buena</p>
+        <p>Sin saber como ha venido te ha cogido la tormenta</p>
+    </div>
+    <div class="texto">
+        <p>Él quería cruzar los mares y olvidar a su sirena</p>
+        <p>La verdad, no fue difícil cuando conoció a Mariela</p>
+        <p>Que tenía los ojos verdes y un negocio entre las piernas</p>
+        <p>Hay que ver que puntería, no te arrimas a una buena</p>
+    </div>
+    <div class="texto">
+        <p>Soldadito marinero conociste a una sirena</p>
+        <p>De esas que dicen te quiero si ven la cartera llena</p>
+        <p>Escogiste la más guapa y a la menos buena</p>
+        <p>Sin saber como ha venido te ha cogido la tormenta</p>
+    </div>
+    <div class="texto">
+        <p>Después de un invierno malo, una mala primavera
+        <p>Dime por que estas buscando una lágrima en la arena
+        <p>Después de un invierno malo</p>
+
+    </div>
+    <!-- Este boton es un link a la pantalla modal, aunque en vez de "informacion" esta puesto "hola" por requisitos del ejercicio -->
+    <a id="abrir" href="#miModal" target="#prueba">HOLA</a> 
+    <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <a href="#" id="X">X</a>
+            <h2>Informacion de utilidad</h2>
+            <ul>
+                <li><p>Titulo: Soldadito Marinero</p></li>
+                <li><p>Autores: Fito y Fitipaldis</p></li>
+                <li><p><a href="https://youtu.be/GxQjx7FkmNA" target="_blank">Link a la cancion</a></p></li>
+            </ul>
+            
+        </div>  
+    </div>
+</body>
+</html>
